@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400');
+*{
+   padding:0px; margin:0px;
+}
+:root {
+   --azul: #0079FF;
+   --verde: #00DFA2;
+   --amarelo: #F6FA70;
+   --magento: #FF0060;
+   --branco: #fff;
+   --cinza: #ddd;
+   --cinzaEscuro: #777;
+}
+
+body {
+   background-color: var(--cinza);
+   padding: 0px;
+   margin: 0px;
+}
+.navbar-brand{
+   font-family: 'Oswald', sans-serif;
+   font-size: 1.7em;
+}
+.vermelho{
+   color: #f00;
+   font-weight: bold;
+}
+.laranja{
+   color: #F6BB42;
+   font-weight: bold;
+}
+.verde{
+   color: #25a24e;
+   color: #3fc36a;
+   font-weight: bold;    
+}
+.azul{
+   color: #435eaa;
+   color: #7b8be8;
+   font-weight: bold;    
+}
+.cartao {
+   display: flex;
+   padding: 5px 20px;
+   align-items: center;
+   font-size: 1.4rem;
+   justify-content: space-between;
+   margin-top: 5px;
+   div{
+      width: 17%;
+   }
+   div:not(:first-child){
+      text-align: right;
+      
+   }
+   .cartao strong {
+      font-size: 50px;
+   }
+   .cartao i {
+      font-size: 25px;
+      font-style: normal;
+      text-align: center;
+   }
+   .cartao small, .cartao small::after {
+      content: "";
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--cinzaEscuro);
+   }
+}
+.cartao1 {
+   background-color: var(--azul);
+}
+
+.cartao2 {
+   background-color: var(--verde);
+}
+
+.cartao3 {
+   background-color: var(--amarelo);
+}
+
+.cartao4 {
+   background-color: var(--branco);
+   border-radius: 6px;
+}

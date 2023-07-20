@@ -1,0 +1,19 @@
+<div class="container mt-4">
+   <h1 class="fs-4">Histórico por mês</h1>
+   <div class="cartao cartao4">
+      <div><i>Mês de registro</i></div>
+      <div><i>Temp min</i></div>
+      <div><i>Temp max</i></div>
+      <div><i>URA min</i></div>
+      <div><i>URA max</i></div>
+      <div><i>Acumulado</i></div>
+  </div>   
+   <div class="cartao cartao4" *ngFor="let historico of historicoMensal">
+      <div><i> {{ formataMes(historico.data) }}</i></div>
+      <div><i class="bi bi-thermometer-half" [ngClass]="{'vermelho': historico.temperaturaMinima >= 30, 'verde': historico.temperaturaMinima < 15,'azul': historico.temperaturaMinima < 10}"> <small>{{ historico.temperaturaMinima }}</small></i></div>
+      <div><i class="bi bi-thermometer-half" [ngClass]="{'vermelho': historico.temperaturaMaxima >= 30, 'verde': historico.temperaturaMaxima < 15,'azul': historico.temperaturaMaxima < 10}"> <small>{{ historico.temperaturaMaxima }}</small></i></div>
+      <div><i class="bi bi-moisture" [ngClass]="{'verde': historico.uraMinima >= 70, 'laranja': historico.uraMinima < 50 && historico.uraMinima > 30,'vermelho': historico.uraMinima < 30}"> {{ historico.uraMinima }}%</i></div>
+      <div><i class="bi bi-moisture" [ngClass]="{'verde': historico.uraMaxima >= 70, 'laranja': historico.uraMaxima < 50 && historico.uraMaxima > 30,'vermelho': historico.uraMaxima < 30}"> {{ historico.uraMaxima }}%</i></div>
+      <div><i class="bi bi-cloud-drizzle"> {{ historico.chuva }}mm</i></div>
+  </div>
+</div>

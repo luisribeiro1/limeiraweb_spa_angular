@@ -1,0 +1,10 @@
+<div class="container mt-4">
+   <h1 class="fs-4">Histórico das últimas horas</h1>
+   <div class="cartao cartao4" *ngFor="let historico of historicoHorario">
+      <i class="bi bi-arrow-up-short"></i>
+      <i class="bi bi-clock-history"> {{ historico.data | date: 'HH:mm '}}</i>
+      <i class="bi bi-thermometer-half" [ngClass]="{'vermelho': historico.temperatura >= 30, 'verde': historico.temperatura < 15,'azul': historico.temperatura < 10}"> <small>{{ historico.temperatura }}</small></i>
+      <i class="bi bi-moisture" [ngClass]="{'verde': historico.ura >= 70, 'laranja': historico.ura < 50 && historico.ura > 30,'vermelho': historico.ura < 30}"> {{ historico.ura }}%</i>
+      <i class="bi bi-cloud-drizzle"> {{ historico.chuva }}mm</i>
+  </div>
+</div>
